@@ -1,0 +1,17 @@
+.players-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.summary{
+    position: fixed;
+    top: 20px;
+    right: 70px;
+    background-color: slateblue;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 5px 5px 10px black;
+}
