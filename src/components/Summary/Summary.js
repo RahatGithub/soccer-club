@@ -1,5 +1,7 @@
 import React from 'react';
 import './Summary.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faFutbolBall } from '@fortawesome/free-solid-svg-icons';
 
 const Summary = (props) => {
     const {selectedPlayers} = props;
@@ -18,7 +20,7 @@ const Summary = (props) => {
             <h4>Squad: </h4>
             <ul className="players-ul">
             {
-                selectedPlayers.map(player => <li>{player.name}</li>)
+                selectedPlayers.map(player => <li><FontAwesomeIcon icon={faFutbolBall} /> {player.name}</li>)
             }
             </ul>
         </div>

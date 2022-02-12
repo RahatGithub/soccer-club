@@ -11,6 +11,12 @@ const PlayersList = () => {
     const handleAddPlayer = (player) => {
         const newCollection = [...selectedPlayers, player];
         setSelectedPlayers(newCollection);
+        if(player.isSelected === false){
+            player.isSelected = true;
+        }
+        else{
+            player.isSelected = false;
+        }
     }
 
     return (
@@ -20,7 +26,7 @@ const PlayersList = () => {
                 playerData.map(player => 
                 <Player 
                     key={player.id}
-                    player={player} 
+                    player={player}
                     handleAddPlayer={handleAddPlayer}>
                 </Player>)
             }
